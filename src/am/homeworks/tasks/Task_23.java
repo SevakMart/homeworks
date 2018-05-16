@@ -1,8 +1,11 @@
-package Training;
+package am.homeworks.tasks;
+
+import java.util.Scanner;
 
 public class Task_23 {
     public static void main(String[] args) {
-        int a = 6, b = 1, c = 18;
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt(), b =scanner.nextInt(), c =scanner.nextInt();
         boolean bool ;
         if(a == 1 || b == 1 || c ==1 ){
             bool  = true;

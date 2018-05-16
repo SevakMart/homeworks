@@ -1,8 +1,11 @@
-package Training;
+package am.homeworks.tasks;
+
+import java.util.Scanner;
 
 public class Task_30 {
     public static void main(String[] args) {
-        int a = 56, b = 12, c = 3;
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt(), b =scanner.nextInt(), c =scanner.nextInt();
         if (a > b && b > c) {
             System.out.println(a + " " + b + " " + c);
         } else if (a > c && c > b) {

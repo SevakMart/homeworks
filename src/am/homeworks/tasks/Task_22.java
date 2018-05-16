@@ -1,8 +1,10 @@
-package Training;
-
+package am.homeworks.tasks;
+import  java.util.Scanner;
 public class Task_22 {
     public static void main(String[] args) {
-        int a = 6, b = 0, c = 18;
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt(), b =scanner.nextInt(), c =scanner.nextInt();
+
         int sum = a+b+c;
         int min = a;
         if (min > a) {
@@ -12,7 +14,7 @@ public class Task_22 {
         } else if (min > c) {
             min = c;
         }
-        System.out.println(sum);
+        System.out.println(min);
 
     }
 }
