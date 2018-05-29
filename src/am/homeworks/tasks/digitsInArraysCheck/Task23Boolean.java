@@ -5,7 +5,7 @@ import am.homeworks.tasks.DigitsGeneralsMethod;
 public class Task23Boolean extends DigitsGeneralsMethod {
     public  void calculateResult(){
 
-        int[] array = createArrayFromInput(5,7,6);
+        int[] array =getArrayNumbers();
 
         for (int i = 0; i <array.length ; i++) {
             if(array[i] == 1){

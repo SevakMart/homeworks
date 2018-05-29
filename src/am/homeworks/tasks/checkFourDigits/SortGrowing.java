@@ -9,7 +9,7 @@ public class SortGrowing extends DigitsGeneralsMethod {
     @Override
     public void  calculateResult() {
 
-        int[] array = createArrayFromInput(5,7,6,8);
+        int[] array = getArrayNumbers();
         int[] sortedArray = sortArray(array);
         for (int i:sortedArray) {
             printResult("The index " + i + " value ", sortedArray[i]);

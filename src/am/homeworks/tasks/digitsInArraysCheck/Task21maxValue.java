@@ -11,7 +11,7 @@ public class Task21maxValue extends DigitsGeneralsMethod {
     @Override
     public void  calculateResult() {
 
-        int[] array = createArrayFromInput(5,7,6);
+        int[] array = getArrayNumbers();
 
         int[] sortedArray = sortArray(array);
 

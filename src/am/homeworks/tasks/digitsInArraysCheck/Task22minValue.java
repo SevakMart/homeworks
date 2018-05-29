@@ -5,7 +5,7 @@ import am.homeworks.tasks.DigitsGeneralsMethod;
 public class Task22minValue extends DigitsGeneralsMethod {
     public  void calculateResult(){
 
-        int[] array = createArrayFromInput(5,7,6);
+        int[] array = getArrayNumbers();
         int[] sortedArray = sortArray(array);
 
         printResult("The min  value ", sortedArray[0]);

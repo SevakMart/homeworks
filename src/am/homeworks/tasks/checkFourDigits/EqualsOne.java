@@ -6,7 +6,7 @@ public class EqualsOne extends DigitsGeneralsMethod {
     @Override
     public void calculateResult() {
 
-        int[] array = createArrayFromInput(5,7,6,8);
+        int[] array = getArrayNumbers();
         int count = 1;
 
         for (int i = 0; i < array.length; i++) {

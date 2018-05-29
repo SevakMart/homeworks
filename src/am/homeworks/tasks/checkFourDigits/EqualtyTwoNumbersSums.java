@@ -9,7 +9,7 @@ public class EqualtyTwoNumbersSums extends DigitsGeneralsMethod {
     @Override
     public void calculateResult() {
 
-        int[] array = createArrayFromInput(5,7,6,8);
+        int[] array = getArrayNumbers();
         boolean bool = array[0] + array[1] == array[2] + array[3] ||
                 array[0] + array[2] == array[1] + array[3] ||
                 array[0] + array[3] == array[2] + array[1];

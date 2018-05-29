@@ -4,7 +4,7 @@ import am.homeworks.tasks.DigitsGeneralsMethod;
 
 public class Task27ArithmeticProgression extends DigitsGeneralsMethod {
     public void calculateResult() {
-        int[] array = createArrayFromInput(5,7,6);
+        int[] array = getArrayNumbers();
         for (int i = 1; i <array.length ; i++) {
             if((array[i-1] +array[i+1])/2 == array[i]){
                 System.out.println(true);

@@ -9,7 +9,7 @@ public class MaxValue extends DigitsGeneralsMethod {
     @Override
     public void  calculateResult() {
 
-        int[] array = createArrayFromInput(5,7,6,8);
+        int[] array = getArrayNumbers();
         int[] sortedArray = sortArray(array);
 
         printResult("The max  value ", sortedArray[sortedArray.length - 1]);

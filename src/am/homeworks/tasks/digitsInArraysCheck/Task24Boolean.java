@@ -4,7 +4,7 @@ import am.homeworks.tasks.DigitsGeneralsMethod;
 
 public class Task24Boolean extends DigitsGeneralsMethod {
     public void calculateResult() {
-        int[] array = createArrayFromInput(5,7,6);
+        int[] array = getArrayNumbers();
 
         int count = 1;
 

@@ -10,7 +10,7 @@ public class MinValue extends DigitsGeneralsMethod {
     @Override
     public void calculateResult() {
 
-        final int[] array = createArrayFromInput(5,7,6,8);
+        final int[] array = getArrayNumbers();
         final int[] sortedArray = sortArray(array);
 
         printResult("The min value ", sortedArray[0]);

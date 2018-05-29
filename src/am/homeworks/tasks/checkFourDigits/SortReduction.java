@@ -9,7 +9,7 @@ public class SortReduction extends DigitsGeneralsMethod {
     @Override
     public void calculateResult() {
 
-        int[] array = createArrayFromInput(5,7,6,8);
+        int[] array = getArrayNumbers();
         int[] sortedArray = sortArray(array);
         for (int i = sortedArray.length - 1; i > 0; i--) {
             printResult("index" + i, sortedArray[i]);

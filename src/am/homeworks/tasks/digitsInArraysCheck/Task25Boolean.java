@@ -4,7 +4,7 @@ import am.homeworks.tasks.DigitsGeneralsMethod;
 
 public class Task25Boolean extends DigitsGeneralsMethod {
     public void calculateResult() {
-        int[] array = createArrayFromInput(5,7,6);
+        int[] array = getArrayNumbers();
         if(array.length == 3){
 
             if (array[0] + array[1] > array[2] || array[2] + array[1] > array[0]  || array[2] + array[0] > array[1] ) {
