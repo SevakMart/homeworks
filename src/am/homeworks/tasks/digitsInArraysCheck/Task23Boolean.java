@@ -1,8 +1,10 @@
 package am.homeworks.tasks.digitsInArraysCheck;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
-public class Task23Boolean extends DigitsGeneralsMethod {
+public class Task23Boolean extends DigitsGeneralsMethod implements CheckNumber,MethodName {
     public  void calculateResult(){
 
         int[] array =getArrayNumbers();
@@ -17,9 +19,8 @@ public class Task23Boolean extends DigitsGeneralsMethod {
         }
 
     }
-
-    public static void main(String[] args) {
-        Task23Boolean task_23_boolean = new Task23Boolean();
-        task_23_boolean.calculateResult();
+    public    CheckNumber chekin(){
+        return new Task23Boolean();
     }
+
 }

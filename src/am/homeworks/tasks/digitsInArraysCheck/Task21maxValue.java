@@ -1,12 +1,15 @@
 package am.homeworks.tasks.digitsInArraysCheck;
 
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
+import am.homeworks.tasks.checkFourDigits.EqualsOne;
 
 /**
  * Class calculate max value from array
  */
-public class Task21maxValue extends DigitsGeneralsMethod {
+public class Task21maxValue extends DigitsGeneralsMethod implements CheckNumber,MethodName {
 
     @Override
     public void  calculateResult() {
@@ -19,10 +22,7 @@ public class Task21maxValue extends DigitsGeneralsMethod {
 
     }
 
-    public static void main(String[] args) {
-
-        Task21maxValue objectMax = new Task21maxValue();
-        objectMax.calculateResult();
-
+    public    CheckNumber chekin(){
+        return new Task21maxValue();
     }
 }

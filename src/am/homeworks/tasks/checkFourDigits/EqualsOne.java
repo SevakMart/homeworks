@@ -1,8 +1,10 @@
 package am.homeworks.tasks.checkFourDigits;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
-public class EqualsOne extends DigitsGeneralsMethod {
+public class EqualsOne extends DigitsGeneralsMethod implements CheckNumber,MethodName {
     @Override
     public void calculateResult() {
 
@@ -10,23 +12,22 @@ public class EqualsOne extends DigitsGeneralsMethod {
         int count = 1;
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == 2) {
-                System.out.println(count);
+            if (array[i] == 1) {
+
                 count++;
             }
         }
         if (count >= 2) {
+            System.out.println(count);
             printResult(true);
         } else {
+            System.out.println(count);
             printResult(false);
         }
 
     }
+   public    CheckNumber chekin(){
+        return new EqualsOne();
+ }
 
-    public static void main(String[] args) {
-
-        EqualsOne equalsOne = new EqualsOne();
-        equalsOne.calculateResult();
-
-    }
 }

@@ -1,25 +1,27 @@
 package am.homeworks.tasks.threeDigitNumbersAnalis;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
+import am.homeworks.tasks.digitsInArraysCheck.Task21maxValue;
 
 import java.util.Scanner;
 
-public class ThreeDigitsSortGrowing extends DigitsGeneralsMethod {
+public class ThreeDigitsSortGrowing extends GeneralsMethod   implements CheckNumber,MethodName {
     @Override
     public void calculateResult() {
 
         String number =  getThreeDigitsNumber();
-        int[] arraysThreeDigits = createArrayFromInput((int) number.charAt(0), (int) number.charAt(1), (int) number.charAt(2));
+        int[] arraysThreeDigits = createArrayFromInput(getStringNumber(number, 0), getStringNumber(number, 1), getStringNumber(number, 2));
         int[] sortedArray = sortArray(arraysThreeDigits);
 
         for (int i = 0; i < sortedArray.length; i++) {
-            System.out.println(sortedArray[i] - 48);
+            System.out.println(sortedArray[i] - DIFFERENCE_CHARACTER_TO_INTEGER);
         }
     }
 
-    public static void main(String[] args) {
-        ThreeDigitsSortGrowing threeDigitsSortGrowing = new ThreeDigitsSortGrowing();
-        threeDigitsSortGrowing.calculateResult();
+    public    CheckNumber chekin(){
+        return new ThreeDigitsSortGrowing();
     }
 }
 

@@ -4,10 +4,13 @@ import java.util.Scanner;
 
 public abstract class DigitsGeneralsMethod {
     Scanner scanner = new Scanner(System.in);
-    public static final int ARRAY_SIZE_FOR_THREE_NUMBERS_TASK = 3;
-    public static final int ARRAY_SIZE_FOR_FOUR_NUMBERS_TASK = 4;
+    private static final int ARRAY_SIZE_FOR_THREE_NUMBERS_TASK = 3;
+    private static final int ARRAY_SIZE_FOR_FOUR_NUMBERS_TASK = 4;
+    protected final int DIFFERENCE_CHARACTER_TO_INTEGER = 48;
 
-    protected abstract void calculateResult();
+
+
+
 
     protected String getThreeDigitsNumber(int firstNumber, int secondNumber, int thirdNumber) {
 
@@ -22,7 +25,7 @@ public abstract class DigitsGeneralsMethod {
 
     ;
 
-    protected int[] getArrayNumbers() {
+    protected  int[] getArrayNumbers() {
 
 
         System.out.println("Entered  size valuue");
@@ -34,6 +37,8 @@ public abstract class DigitsGeneralsMethod {
         return array;
 
     }
+
+
 
     protected int[] sortArray(final int[] numbers) {
         for (int i = 0; i < numbers.length; i++) {
@@ -97,6 +102,7 @@ public abstract class DigitsGeneralsMethod {
 
         printResult("The   arguments length", arrays.length);
         return arrays;
+
     }
 
 

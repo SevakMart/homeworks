@@ -1,13 +1,16 @@
 package am.homeworks.tasks.threeDigitNumbersAnalis;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
+import am.homeworks.tasks.digitsInArraysCheck.Task21maxValue;
 
-public class ThreeDigitsNumberCheck extends DigitsGeneralsMethod{
+public class ThreeDigitsNumberCheck extends GeneralsMethod   implements CheckNumber,MethodName{
     @Override
     public void calculateResult() {
 
         String number =  getThreeDigitsNumber();
-        int[] arraysThreeDigits = createArrayFromInput((int) number.charAt(0), (int) number.charAt(1), (int) number.charAt(2));
+        int[] arraysThreeDigits = createArrayFromInput(getStringNumber(number, 0), getStringNumber(number, 1), getStringNumber(number, 2));
        int threeDigitsNumber = Integer.parseInt(number);
        if(threeDigitsNumber > 300){
            printResult("", arraysThreeDigits[0]/arraysThreeDigits[1]);
@@ -16,8 +19,7 @@ public class ThreeDigitsNumberCheck extends DigitsGeneralsMethod{
        }
     }
 
-    public static void main(String[] args) {
-        ThreeDigitsNumberCheck threeDigitsNumberCheck =  new ThreeDigitsNumberCheck();
-        threeDigitsNumberCheck.calculateResult();
+    public    CheckNumber chekin(){
+        return new ThreeDigitsNumberCheck();
     }
 }

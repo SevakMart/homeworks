@@ -1,18 +1,21 @@
 package am.homeworks.tasks.threeDigitNumbersAnalis;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
+import am.homeworks.tasks.digitsInArraysCheck.Task21maxValue;
 
 import java.util.Scanner;
 
-public class ChechkThreeDigits extends DigitsGeneralsMethod {
+public class ChechkThreeDigits extends GeneralsMethod implements CheckNumber,MethodName {
     public char f;
 
     @Override
     public void calculateResult() {
 
         String number =  getThreeDigitsNumber();
-        int[] arraysThreeDigits = createArrayFromInput((int) number.charAt(0) - 48, (int) number.charAt(1) - 48, (int) number.charAt(2) - 48);
-        int sum = arraysThreeDigits[0] + arraysThreeDigits[1] + arraysThreeDigits[2];
+        int[] arraysThreeDigits = createArrayFromInput(getStringNumber(number,0), getStringNumber(number,1), getStringNumber(number,2));
+    
         if (arraysThreeDigits[0] + arraysThreeDigits[1] < 5) {
             f = 'a';
         } else {
@@ -20,9 +23,8 @@ public class ChechkThreeDigits extends DigitsGeneralsMethod {
         }
         printResult(f);
     }
-
-    public static void main(String[] args) {
-        ChechkThreeDigits chechkThreeDigits = new ChechkThreeDigits();
-        chechkThreeDigits.calculateResult();
+    public    CheckNumber chekin(){
+        return new ChechkThreeDigits();
     }
+
 }

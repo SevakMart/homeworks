@@ -1,25 +1,25 @@
 package am.homeworks.tasks.threeDigitNumbersAnalis;
 
-import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.CheckNumber;
+import am.homeworks.tasks.MethodName;
+import am.homeworks.tasks.digitsInArraysCheck.Task21maxValue;
 
-import java.util.Scanner;
-
-public class ThreeDigitsCheckEquals extends DigitsGeneralsMethod {
+public class ThreeDigitsCheckEquals extends GeneralsMethod  implements CheckNumber,MethodName {
     @Override
     public void calculateResult() {
 
-        String number =  getThreeDigitsNumber();
-        if(number.charAt(0) == number.charAt(1) || number.charAt(2) == number.charAt(0) || number.charAt(2) == number.charAt(1)){
+        String number = getThreeDigitsNumber();
+        if (getStringNumber(number, 0) == getStringNumber(number, 1) ||
+                getStringNumber(number, 2) == getStringNumber(number, 0) ||
+                getStringNumber(number, 2) == getStringNumber(number, 0)) {
             printResult(true);
-        }else{
+        } else {
             printResult(false);
         }
 
     }
-    public static void main(String[] args) {
 
-        ThreeDigitsCheckEquals threeDigitsCheckEquals = new ThreeDigitsCheckEquals();
-        threeDigitsCheckEquals.calculateResult();
-
+    public    CheckNumber chekin(){
+        return new ThreeDigitsCheckEquals();
     }
 }

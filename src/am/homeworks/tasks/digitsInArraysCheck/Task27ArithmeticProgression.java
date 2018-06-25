@@ -1,8 +1,10 @@
 package am.homeworks.tasks.digitsInArraysCheck;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
-public class Task27ArithmeticProgression extends DigitsGeneralsMethod {
+public class Task27ArithmeticProgression extends DigitsGeneralsMethod implements CheckNumber,MethodName {
     public void calculateResult() {
         int[] array = getArrayNumbers();
         for (int i = 1; i <array.length ; i++) {
@@ -16,9 +18,8 @@ public class Task27ArithmeticProgression extends DigitsGeneralsMethod {
 
 
     }
-
-    public static void main(String[] args) {
-        Task27ArithmeticProgression task_27_arithmeticProgression = new Task27ArithmeticProgression();
-        task_27_arithmeticProgression.calculateResult();
+    public    CheckNumber chekin(){
+        return new Task27ArithmeticProgression();
     }
+
 }

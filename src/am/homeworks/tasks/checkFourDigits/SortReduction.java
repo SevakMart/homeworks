@@ -1,11 +1,13 @@
 package am.homeworks.tasks.checkFourDigits;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
 /**
  * Getting signed in numbers  sort Reduction
  */
-public class SortReduction extends DigitsGeneralsMethod {
+public class SortReduction extends DigitsGeneralsMethod implements CheckNumber,MethodName {
     @Override
     public void calculateResult() {
 
@@ -17,9 +19,8 @@ public class SortReduction extends DigitsGeneralsMethod {
 
     }
 
-    public static void main(String[] args) {
-        SortReduction sortReduction =new SortReduction();
-        sortReduction.calculateResult();
+    public    CheckNumber chekin(){
+        return new SortReduction();
     }
 
 }

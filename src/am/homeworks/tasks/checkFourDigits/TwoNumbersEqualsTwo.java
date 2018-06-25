@@ -1,11 +1,13 @@
 package am.homeworks.tasks.checkFourDigits;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
 /**
  * Accessed numbers checks the equality of one
  */
-public class TwoNumbersEqualsTwo  extends DigitsGeneralsMethod {
+public class TwoNumbersEqualsTwo  extends DigitsGeneralsMethod  implements CheckNumber,MethodName {
     @Override
     public void  calculateResult() {
 
@@ -20,11 +22,8 @@ public class TwoNumbersEqualsTwo  extends DigitsGeneralsMethod {
         }
 
     }
-
-    public static void main(String[] args) {
-
-       TwoNumbersEqualsTwo twoNumbersEqualsTwo = new TwoNumbersEqualsTwo();
-       twoNumbersEqualsTwo.calculateResult();
-
+   public    CheckNumber chekin(){
+        return new TwoNumbersEqualsTwo();
     }
+
 }

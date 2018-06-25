@@ -1,11 +1,13 @@
 package am.homeworks.tasks.checkFourDigits;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
 /**
  * Getting signed in numbers  max value
  */
-public class MaxValue extends DigitsGeneralsMethod {
+public class MaxValue extends DigitsGeneralsMethod implements CheckNumber,MethodName {
     @Override
     public void  calculateResult() {
 
@@ -15,9 +17,8 @@ public class MaxValue extends DigitsGeneralsMethod {
         printResult("The max  value ", sortedArray[sortedArray.length - 1]);
 
     }
-
-    public static void main(String[] args) {
-     MaxValue maxValue =new MaxValue();
-     maxValue.calculateResult();
+    public  CheckNumber chekin(){
+        return new MaxValue();
     }
+
 }

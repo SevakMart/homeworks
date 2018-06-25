@@ -1,22 +1,24 @@
 package am.homeworks.tasks.threeDigitNumbersAnalis;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
+import am.homeworks.tasks.digitsInArraysCheck.Task21maxValue;
 
 import java.util.Scanner;
 
-public class ThreeDigitsCheckMin extends DigitsGeneralsMethod {
+public class ThreeDigitsCheckMin extends GeneralsMethod  implements CheckNumber,MethodName {
     @Override
     public void calculateResult() {
 
         String number =  getThreeDigitsNumber();
-        int [] arraysThreeDigits=createArrayFromInput((int)number.charAt(0),(int)number.charAt(1),(int)number.charAt(2));
+        int[] arraysThreeDigits = createArrayFromInput(getStringNumber(number, 0), getStringNumber(number, 1), getStringNumber(number, 2));
         int [] sortedArray = sortArray(arraysThreeDigits);
-        System.out.println(sortedArray[0]-48);
+        printResult("This is min  value",getStringNumber(number,0));
 
     }
 
-    public static void main(String[] args) {
-       ThreeDigitsCheckMin threeDigitsCheckMin=new ThreeDigitsCheckMin();
-        threeDigitsCheckMin.calculateResult();
+    public CheckNumber chekin(){
+        return new Task21maxValue();
     }
 }

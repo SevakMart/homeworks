@@ -1,8 +1,10 @@
 package am.homeworks.tasks.digitsInArraysCheck;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
-public class Task29SortA extends DigitsGeneralsMethod {
+public class Task29SortA extends DigitsGeneralsMethod implements CheckNumber,MethodName {
     public void calculateResult() {
 
         int[] array = getArrayNumbers();
@@ -14,8 +16,7 @@ public class Task29SortA extends DigitsGeneralsMethod {
         }
     }
 
-    public static void main(String[] args) {
-        Task29SortA task29sortA = new Task29SortA();
-        task29sortA.calculateResult();
+    public    CheckNumber chekin(){
+        return new Task29SortA();
     }
 }

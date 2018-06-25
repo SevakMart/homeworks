@@ -1,8 +1,10 @@
 package am.homeworks.tasks.digitsInArraysCheck;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
-public class Task28GeometricProgression extends DigitsGeneralsMethod {
+public class Task28GeometricProgression extends DigitsGeneralsMethod implements CheckNumber,MethodName {
     public void calculateResult() {
         int[] array = getArrayNumbers();
         for (int i = 1; i < array.length; i++) {
@@ -13,11 +15,9 @@ public class Task28GeometricProgression extends DigitsGeneralsMethod {
             }
         }
 
-
     }
 
-    public static void main(String[] args) {
-        Task28GeometricProgression task_28_geometricProgression = new Task28GeometricProgression();
-        task_28_geometricProgression.calculateResult();
+    public    CheckNumber chekin(){
+        return new Task28GeometricProgression();
     }
 }

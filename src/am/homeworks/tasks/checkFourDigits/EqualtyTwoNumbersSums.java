@@ -1,11 +1,13 @@
 package am.homeworks.tasks.checkFourDigits;
 
+import am.homeworks.tasks.CheckNumber;
 import am.homeworks.tasks.DigitsGeneralsMethod;
+import am.homeworks.tasks.MethodName;
 
 /**
  * The numbers entered are checked by the numbers equal to the sum of two or two numbers
  */
-public class EqualtyTwoNumbersSums extends DigitsGeneralsMethod {
+public class EqualtyTwoNumbersSums extends DigitsGeneralsMethod implements CheckNumber,MethodName {
     @Override
     public void calculateResult() {
 
@@ -21,11 +23,8 @@ public class EqualtyTwoNumbersSums extends DigitsGeneralsMethod {
         }
 
     }
-
-    public static void main(String[] args) {
-
-        EqualtyTwoNumbersSums equaltyTwoNumbersSums = new EqualtyTwoNumbersSums();
-        equaltyTwoNumbersSums.calculateResult();
-
+    public    CheckNumber chekin(){
+        return new EqualtyTwoNumbersSums();
     }
+
 }
