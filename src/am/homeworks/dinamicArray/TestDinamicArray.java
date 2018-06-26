@@ -12,5 +12,6 @@ public class TestDinamicArray {
         dinamicArray.add(4);
 
         dinamicArray.remove(3);
+        dinamicArray.remove(9);
     }
 }
