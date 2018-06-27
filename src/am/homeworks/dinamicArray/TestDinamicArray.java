@@ -10,6 +10,7 @@ public class TestDinamicArray {
         dinamicArray.add(8);
         dinamicArray.add(9);
         dinamicArray.add(4);
+        dinamicArray.size();
 //        dinamicArray.remove(3);
 //        dinamicArray.remove(9);
 //        dinamicArray.removeIndex(1);
@@ -17,7 +18,9 @@ public class TestDinamicArray {
 //        dinamicArray.contains(59);
 //        dinamicArray.indexOf(45);
      //
-        int [] a={1,2,3};
-dinamicArray.addAll(dinamicArray,a);
+dinamicArray.addAll(new DinamicArray(1,2));
+        dinamicArray.size();
+        dinamicArray.removeIndex(3);
+        dinamicArray.size();
     }
 }

@@ -34,6 +34,7 @@ public class DinamicArray implements ArrayMethod {
             System.out.print(i + ",");
         }
         System.out.println();
+
     }
 
     public void enlargeArrayLength() {
@@ -60,16 +61,17 @@ public class DinamicArray implements ArrayMethod {
 
 
     public void add(int addingIntejer) {
+
         if (size == array.length) {
-
             enlargeArrayLength();
-
         }
         array[size++] = addingIntejer;
         showArray();
+
     }
 
     public void remove(int removeNumber) {
+
         for (int i = 0; i < array.length; i++) {
             if (array[i] == removeNumber) {
                 // i = 4, j= 5,
@@ -79,14 +81,18 @@ public class DinamicArray implements ArrayMethod {
             }
         }
         showArray();
+        size--;
     }
 
 
     public void removeIndex(int index) {
+
         remove(get(index));
+
     }
 
     public boolean contains(int element) {
+
         for (int i : array) {
             if (i == element) {
                 System.out.println(true);
@@ -95,9 +101,11 @@ public class DinamicArray implements ArrayMethod {
         }
         System.out.println(false);
         return false;
+
     }
 
     public int indexOf(int element) {
+
         for (int i = 0; i < array.length; i++) {
             if (array[i] == element) {
                 System.out.println(i);
@@ -107,9 +115,11 @@ public class DinamicArray implements ArrayMethod {
         }
         System.out.println(-1);
         return -1;
+
     }
 
   public DinamicArray  subList(int startIndex,int endIndex){
+
       DinamicArray dinArr =new DinamicArray(endIndex-startIndex);
         for (int i = startIndex; i < endIndex ; i++) {
             dinArr.add(array[i]);
@@ -117,14 +127,20 @@ public class DinamicArray implements ArrayMethod {
         return dinArr;
 
   }
-    public DinamicArray  addAll(DinamicArray dAr,int [] ar){
+    public void  addAll(DinamicArray ar){
 
-        for (int i : ar) {
-          dAr.add(i);
+        for(int i:ar.array){
+            add(i);
         }
-        return dAr;
+
     }
 
+    public int size() {
+
+        System.out.println(size);
+        return size;
+
+    }
 
 }
 
