@@ -54,6 +54,8 @@ public class DinamicArray implements ArrayMethod {
     public void set(int index, int elementy) {
 
         array[index] = elementy;
+        showArray();
+
     }
 
 
@@ -83,6 +85,46 @@ public class DinamicArray implements ArrayMethod {
     public void removeIndex(int index) {
         remove(get(index));
     }
+
+    public boolean contains(int element) {
+        for (int i : array) {
+            if (i == element) {
+                System.out.println(true);
+                return true;
+            }
+        }
+        System.out.println(false);
+        return false;
+    }
+
+    public int indexOf(int element) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == element) {
+                System.out.println(i);
+                return i;
+
+            }
+        }
+        System.out.println(-1);
+        return -1;
+    }
+
+  public DinamicArray  subList(int startIndex,int endIndex){
+      DinamicArray dinArr =new DinamicArray(endIndex-startIndex);
+        for (int i = startIndex; i < endIndex ; i++) {
+            dinArr.add(array[i]);
+        }
+        return dinArr;
+
+  }
+    public DinamicArray  addAll(DinamicArray dAr,int [] ar){
+
+        for (int i : ar) {
+          dAr.add(i);
+        }
+        return dAr;
+    }
+
 
 }
 

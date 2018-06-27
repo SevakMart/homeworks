@@ -6,5 +6,8 @@ public interface ArrayMethod {
      void remove(int removeNumber);
      int  get(int index);
      void set(int  index, int element);
+     boolean contains(int element);
+     int  indexOf(int element);
+
 
 }
